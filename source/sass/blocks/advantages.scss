@@ -1,0 +1,159 @@
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: none;
+  column-gap: 33px;
+  row-gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1023 {
+    column-gap: 27px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages__icon {
+  fill: $color-deep-sky-blue;
+  margin-bottom: 14px;
+
+  &--confidential {
+    margin-left: -5px;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 7px;
+
+    &--confidential,
+    &--price-tag {
+      margin-bottom: 6px;
+      margin-left: 0;
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 5px;
+    transform: scale(0.85);
+    margin-left: -2px;
+
+    &--confidential,
+    &--price-tag {
+      margin-bottom: 9px;
+    }
+  }
+}
+
+.advantages__item {
+  font-family: $ff-secondary-font;
+  line-height: 135%;
+  padding: 40px;
+  padding-left: 44px;
+  color: $color-black-pearl;
+  border: 1px solid $color-whisper-border;
+  border-left: 1px solid transparent;
+  position: relative;
+  min-height: 300px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $color-deep-sky-blue;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &:hover {
+    background-color: $color-deep-sky-blue;
+    border: 1px solid $color-deep-sky-blue;
+    border-left: 1px solid transparent;
+
+    h3,
+    p {
+      color: $color-alice-blue-border;
+    }
+
+    .advantages__icon {
+      fill: $color-alice-blue-border;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: $ff-main-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 135%;
+    color: $color-deep-sky-blue;
+
+    @include vp-1023 {
+      margin-bottom: 11px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 40px 40px 30px 46px;
+    min-height: 360px;
+  }
+
+  @include vp-767 {
+    min-height: 340px;
+    padding-top: 27px;
+    padding-left: 29px;
+    padding-right: 30px;
+  }
+}
+
+.advantages__item--price-tag {
+  @include vp-767 {
+    min-height: 325px;
+  }
+
+  & h3 {
+    @include vp-1023 {
+      margin-bottom: 6px;
+      margin-top: -2px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 14px;
+      margin-top: 1px;
+    }
+  }
+}
+
+.advantages__item--confidential {
+  @include vp-767 {
+    min-height: 325px;
+  }
+
+  & h3 {
+    @include vp-767 {
+      margin-bottom: 15px;
+    }
+  }
+}

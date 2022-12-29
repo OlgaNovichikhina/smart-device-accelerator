@@ -1,0 +1,140 @@
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+
+  @include vp-1023 {
+    padding: 0 24px;
+  }
+
+  @include vp-767 {
+    padding: 0 16px;
+  }
+
+  &--header {
+    max-width: 1260px;
+    min-height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 29px 80px 15px 20px;
+
+    @include vp-1023 {
+      padding: 15px 80px 15px 51px;
+      min-height: 100px;
+    }
+
+    @include vp-767 {
+      padding: 10px 45px 10px 26px;
+      min-height: 70px;
+    }
+  }
+
+  &--promo {
+    padding: 0;
+    font-family: $ff-main-font;
+    font-style: normal;
+    font-weight: 700;
+    color: $color-alice-blue-border;
+    max-width: 970px;
+    margin: 0 auto;
+  }
+
+  &--advantages {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 120px 20px 118px 20px;
+
+    @include vp-1023 {
+      padding: 80px 49px 74px;
+    }
+
+    @include vp-767 {
+      padding: 50px 24px 45px;
+    }
+  }
+
+  &--about {
+    max-width: 1220px;
+    margin: 0 auto;
+    display: block;
+    padding-left: 250px;
+    padding-bottom: 120px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 150px;
+      height: 320px;
+      background-image: image-set("../img/2022@2x.webp" 2x, "../img/2022.webp" 1x);
+    }
+
+    @include vp-1023 {
+      padding-bottom: 80px;
+      padding-left: 226px;
+      padding-right: 47px;
+
+      &::before {
+        left: 46px;
+        top: 7px;
+      }
+    }
+
+    @include vp-767 {
+      padding-bottom: 79px;
+      padding-right: 10px;
+      padding-left: 25px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &--services {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 64px 20px 125px;
+
+    @include vp-1023 {
+      padding: 55px 51px 60px;
+    }
+
+    @include vp-767 {
+      padding: 46px 25px 70px 25px;
+    }
+  }
+
+  &--feedback {
+    display: flex;
+    flex-direction: column;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &--footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include vp-1023 {
+      flex-direction: column;
+      padding: 50px 46px 24px 50px;
+    }
+
+    @include vp-767 {
+      padding: 0 16px;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.feedback {
+  position: relative;
+  min-height: 840px;
+  width: 100%;
+  background-color: $color-deep-sky-blue-polygon;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: rgba(4, 24, 39, 0.5);
+    height: 840px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 100%, 0 0, 50.5% 0);
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 510px;
+    height: 285px;
+    background-image: image-set("../img/paper-airplane@2x.webp" 2x, "../img/paper-airplane.webp" 1x);
+    background-repeat: no-repeat;
+    top: 246px;
+    right: 55.2%;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  @include vp-1023 {
+    min-height: 580px;
+  }
+
+  @include vp-767 {
+    min-height: 749px;
+  }
+}
+
+.feedback__form-wrapper {
+  margin-left: 50%;
+  margin-top: 150px;
+  padding: 18px 10px 13px 18px;
+  padding-bottom: 10px;
+
+
+  @include vp-1023 {
+    margin-left: 8px;
+    margin-top: 31px;
+    margin-right: 11px;
+    padding: 18px 16px 13px 18px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
+.feedback h2 {
+  font-family: $ff-main-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+  margin-top: -5px;
+  margin-left: -3px;
+  margin-bottom: 14px;
+
+  @include vp-1023 {
+    margin-bottom: 8px;
+    margin-left: 0;
+    margin-top: -6px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 140.62%;
+    margin-left: 0;
+  }
+}
+
+.feedback p {
+  font-family: $ff-secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 33px;
+
+  @include vp-1023 {
+    margin-top: 7px;
+    margin-bottom: 26px;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 134.4%;
+    margin-left: 0;
+    margin-bottom: 35px;
+    margin-top: 9px;
+  }
+}

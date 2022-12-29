@@ -1,0 +1,201 @@
+.services {
+  width: 100%;
+  background-color: $color-black-pearl;
+  color: $color-default-white;
+}
+
+.services h2 {
+  font-family: $ff-main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+  margin-top: 0;
+  margin-bottom: 55px;
+
+  @include vp-1023 {
+    margin-bottom: 38px;
+  }
+
+  @include vp-767 {
+    padding-right: 20px;
+    font-size: 28px;
+    line-height: 140.62%;
+    margin-bottom: 30px;
+  }
+}
+
+.services br {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+  }
+}
+
+.services__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 85px;
+  padding: 0;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+}
+
+.services__item {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+
+  ::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    background-color: $color-deep-sky-blue;
+    background-image: url("../img/svg/icon-arrow-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px 0 0 0;
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+      background-size: 8%;
+    }
+  }
+
+  &--production {
+    background-image: image-set("../img/services/service-card-1-desktop@2x.webp" 2x,
+                                "../img/services/service-card-1-desktop.webp" 1x);
+    background-color: $color-bahama-blue;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+    @include vp-1023 {
+      background-image: image-set("../img/services/service-card-1-tablet@2x.webp" 2x,
+                                  "../img/services/service-card-1-tablet.webp" 1x);
+    }
+
+    @include vp-767 {
+      background-image: image-set("../img/services/service-card-1-mobile@2x.webp" 2x,
+                                  "../img/services/service-card-1-mobile.webp" 1x);
+    }
+  }
+
+  &--mounting {
+    background-image: image-set("../img/services/service-card-2-desktop@2x.webp" 2x,
+                                "../img/services/service-card-2-desktop.webp" 1x);
+    background-color: $color-bahama-blue;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+    @include vp-1023 {
+      background-image: image-set("../img/services/service-card-2-tablet@2x.webp" 2x,
+                                  "../img/services/service-card-2-tablet.webp" 1x);
+    }
+
+    @include vp-767 {
+      background-image: image-set("../img/services/service-card-2-mobile@2x.webp" 2x,
+                                  "../img/services/service-card-2-mobile.webp" 1x);
+    }
+  }
+
+  &--accessories {
+    background-image: image-set("../img/services/service-card-3-desktop@2x.webp" 2x,
+                                "../img/services/service-card-3-desktop.webp" 1x);
+    background-color: $color-bahama-blue;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+    @include vp-1023 {
+      background-image: image-set("../img/services/service-card-3-tablet@2x.webp" 2x,
+                                  "../img/services/service-card-3-tablet.webp" 1x);
+    }
+
+    @include vp-767 {
+      background-image: image-set("../img/services/service-card-3-mobile@2x.webp" 2x,
+                                  "../img/services/service-card-3-mobile.webp" 1x);
+    }
+  }
+
+  @include vp-1023 {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  @include vp-767 {
+    min-width: 270px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.services__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  min-height: 650px;
+
+  @include vp-1023 {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  @include vp-767 {
+    min-width: 270px;
+  }
+}
+
+.services p {
+  margin: 0;
+  padding-top: 47px;
+  padding-left: 40px;
+  max-width: 200px;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    padding-top: 36px;
+    padding-left: 45px;
+  }
+
+  @include vp-767 {
+    padding-top: 25px;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.services__mobile-only {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.services__title {
+  @include vp-767 {
+    display: none;
+  }
+}

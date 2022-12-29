@@ -1,0 +1,209 @@
+.form__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 31px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.form input {
+  background: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: 1px solid transparent;
+  width: 100%;
+  min-height: 50px;
+  padding: 15px;
+
+  @include vp-1023 {
+    padding-top: 12px;
+  }
+
+  &::placeholder {
+    font-family: $ff-secondary-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+}
+
+.form textarea {
+  width: 100%;
+  min-height: 155px;
+  background: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: 1px solid transparent;
+  margin-top: 20px;
+  padding: 15px;
+  padding-top: 23px;
+
+  @include vp-1023 {
+    padding-top: 29px;
+    padding-left: 13px;
+  }
+
+  @include vp-767 {
+    display: block;
+    min-width: 270px;
+    width: 100%;
+    min-height: 180px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+    padding-top: 23px;
+  }
+
+  &::placeholder {
+    font-family: $ff-secondary-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+}
+
+.form input:hover,
+.form input:focus-visible,
+.form textarea:hover,
+.form textarea:focus-visible {
+  outline: 1px solid $color-black-pearl;
+  border: 1px solid $color-black-pearl;
+}
+
+.form input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.form__check-box {
+  position: absolute;
+  margin-left: -26px;
+  margin-top: 8px;
+  min-width: 16px;
+  min-height: 17px;
+  background-color: transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include vp-767 {
+    min-width: 14px;
+    min-height: 14px;
+  }
+}
+
+.form input:checked + .form__check-box {
+  background-image: url("../img/svg/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.form__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 30px;
+
+  @include vp-1023 {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    padding: 30px 0 10px;
+    flex-direction: column;
+  }
+
+  & input:hover + .form__check-box,
+  & input:focus-visible + .form__check-box {
+    border: 1px solid $color-black-pearl;
+  }
+}
+
+.form__button-wrapper label {
+  width: 51%;
+  min-width: 150px;
+  font-family: $ff-secondary-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  opacity: 0.8;
+  padding-left: 58px;
+  cursor: pointer;
+
+  @include vp-1023 {
+    width: 49%;
+    padding-left: 40px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-top: 25px;
+    margin-left: 0;
+    padding-left: 31px;
+  }
+}
+
+.form__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $ff-main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  background-color: $color-black-pearl-button;
+  border-radius: 3px;
+  user-select: none;
+  width: 46%;
+  min-height: 45px;
+  border: none;
+  padding-top: 12px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 1px solid $color-default-white;
+    border: 1px solid $color-default-white;
+  }
+
+  @include vp-1023 {
+    margin-right: 68px;
+    width: 40%;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+    width: 100%;
+  }
+}

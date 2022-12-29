@@ -1,0 +1,104 @@
+.about h2 {
+  font-family: $ff-main-font;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  margin: 0 0 13px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 14px;
+  }
+}
+
+.about__info {
+  margin-bottom: 40px;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
+
+.about__info--more {
+  display: block;
+}
+
+.about__info--mobile {
+  @include vp-767 {
+    max-height: 210px;
+    overflow: hidden;
+  }
+}
+
+.about__info--mobile.is-open {
+  @include vp-767 {
+    max-height: 350px;
+  }
+}
+
+.about__info--more.is-open {
+  display: block;
+}
+
+.about__info p {
+  font-family: $ff-secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-black-pearl-button;
+  margin: 0 0 21px;
+
+  @include vp-1023 {
+    margin-bottom: 17px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 18px;
+  }
+}
+
+.about__button {
+  font-family: $ff-main-font;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  user-select: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  min-height: 45px;
+  border: 1px solid $color-deep-sky-blue-polygon;
+  border-radius: 3px;
+  color: $color-deep-sky-blue-polygon;
+  background-color: transparent;
+
+  @include vp-767 {
+    width: 56%;
+    max-width: 100%;
+    min-height: 35px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+    background-color: $color-black-pearl;
+    color: $color-alice-blue;
+    border: 1px solid $color-deep-sky-blue-polygon;
+  }
+}

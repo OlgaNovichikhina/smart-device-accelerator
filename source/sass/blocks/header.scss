@@ -1,0 +1,151 @@
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: $header-gradient;
+
+  @include vp-1023 {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.header__logo {
+  padding-bottom: 5px;
+  cursor: pointer;
+
+  @include vp-1023 {
+    padding: 0;
+    margin-top: 5px;
+  }
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.header__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 38px;
+  width: 460px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  margin-top: 12px;
+
+  @include vp-1023 {
+    margin-top: 0;
+    align-items: center;
+    width: 80px;
+    margin-bottom: 25px;
+    padding-top: 10px;
+  }
+
+  @include vp-767 {
+    margin: -2px 0 0;
+    padding-top: 0;
+  }
+}
+
+.header__item {
+  min-width: 210px;
+  margin: 0 0 10px 0;
+
+  @include vp-1023 {
+    min-width: 20px;
+    width: 20px;
+
+    &:nth-child(2n-1) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.header__link {
+  font-family: $ff-secondary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 35px;
+  position: relative;
+  color: $color-alice-blue;
+  cursor: pointer;
+  min-width: 210px;
+
+  &--mail::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    top: 0;
+    background: url("../img/svg/icon-mail.svg") no-repeat center;
+  }
+
+  &--phone::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    top: 0;
+    background: url("../img/svg/icon-phone.svg") no-repeat center;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @include vp-1023 {
+    min-width: 20px;
+    width: 20px;
+  }
+}
+
+.header__button {
+  font-family: $ff-main-font;
+  height: min-content;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid $color-alice-blue-border;
+  border-radius: 3px;
+  min-width: 160px;
+  max-width: 300px;
+  margin-bottom: 14px;
+  margin-top: 7px;
+  padding: 7px 15px 12px 15px;
+  background-color: transparent;
+  user-select: none;
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+    background-color: $color-deep-sky-blue-polygon;
+  }
+}
+
+.header__contact-text {
+  @include vp-1023 {
+    display: none;
+  }
+}
